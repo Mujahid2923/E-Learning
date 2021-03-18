@@ -1,0 +1,30 @@
+<style>
+#page-content {
+  background-image: url('https://www.linkpicture.com/q/wes-hicks-wS9hvhqn4XU-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 95%;
+}
+</style>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>E Learning</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="d-flex flex-column">
+    <%= render "layouts/navigation" %>
+    <div id="page-content">
+      <%= render "layouts/messages" %>
+      <%= yield %>
+    </div>
+    <%= render ("layouts/footer") %>
+  </body>
+</html>

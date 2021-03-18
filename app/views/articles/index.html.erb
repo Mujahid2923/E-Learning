@@ -1,0 +1,6 @@
+<h1 class = "text-center text-white mt-4">Listing all Articles</h1>
+
+<%= render "article" %>
+<%= will_paginate @articles , :container => false %>
+
+<p class= "text-center"><%= link_to "CREATE a new article" , new_article_path , class:"btn btn-warning",method: :get %></p>
